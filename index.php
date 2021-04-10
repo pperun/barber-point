@@ -25,7 +25,7 @@
 $pages = ['service'=>'Послуги', 'portfolio'=>'Портфоліо', 'about'=>'Про нас', 'contacts'=>'Контакти']
 ?>
 <div class="menu">
-    <a href="?page=index">
+    <a href="?page=landing">
         <div class="logo">
             <div class="logo-icon">
                 <div class="logo-circle">
@@ -56,7 +56,7 @@ $pages = ['service'=>'Послуги', 'portfolio'=>'Портфоліо', 'about
 </div>
 
 <?php
-if(empty($_GET['page'])) include("index.html");
+if(empty($_GET['page'])) include("landing.html");
 if($_GET['page'] == 'service' && $_GET['haircut']) include "haircut".$_GET['haircut'].".html";
 elseif($_GET['page'] == 'service' && $_GET['beard']) include "beard".$_GET['beard'].".html";
 else include "{$_GET['page']}.html";
